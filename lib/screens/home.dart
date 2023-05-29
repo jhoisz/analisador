@@ -53,26 +53,27 @@ class _HomeState extends State<Home> {
       type: FileType.custom,
       allowedExtensions: ['txt'],
     );
-    if (result != null && result.files.first.extension == 'txt') {
-      File file = File.fromRawPath(result.files.first.bytes!);
-      setState(() {
-        isLoading = true;
-      });
-      print(file.path);
-      final tokens = await api.getTokens(file.path);
-      setState(() {
-        isLoading = false;
-      });
-      if (mounted) {
-        Navigator.of(context).pushReplacementNamed(
-          '/result',
-          arguments: tokens,
-        );
+    if (result != null) {
+      if (result.files.first.extension == 'txt') {
+        File file = File.fromRawPath(result.files.first.bytes!);
+        setState(() {
+          isLoading = true;
+        });
+        final tokens = await api.getTokens(file.path);
+        setState(() {
+          isLoading = false;
+        });
+        if (mounted) {
+          Navigator.of(context).pushReplacementNamed(
+            '/result',
+            arguments: tokens,
+          );
+        }
+      } else {
+        setState(() {
+          isError = true;
+        });
       }
-    } else {
-      setState(() {
-        isError = true;
-      });
     }
   }
 }
