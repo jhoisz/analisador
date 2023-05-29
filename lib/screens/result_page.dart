@@ -1,5 +1,6 @@
 import 'package:analisador/screens/components/custom_button.dart';
 import 'package:analisador/screens/components/custom_card.dart';
+import 'package:analisador/theme/theme_colors.dart';
 import 'package:flutter/material.dart';
 
 import '../models/token.dart';
@@ -50,7 +51,7 @@ class ResultPage extends StatelessWidget {
               function: () {
                 Navigator.of(context).pushReplacementNamed('/home');
               },
-              color: const Color(0xFF077F8C),
+              color: ThemeColors.baseColor,
             ),
           ],
         ),
@@ -74,7 +75,7 @@ class _TitleRichText extends StatelessWidget {
               style: TextStyle(
                 fontSize: 24.0,
                 fontWeight: FontWeight.w100,
-                color: Color(0xFF077F8C),
+                color: ThemeColors.baseColor,
               ),
             ),
           ]),
