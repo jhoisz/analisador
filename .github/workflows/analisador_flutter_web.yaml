@@ -32,7 +32,7 @@ jobs:
           git config --global user.name jhoisz
           git config --global init.defaultBranch main
           git status
-          git remote add origin https://${{secrets.token}}@github.com/jhoisz/jhoisz.github.io.git
+          git remote add origin https://${{secrets.token}}@github.com/jhoisz/analisador.git
           git checkout -b gh-pages
           git add --all
           git commit -m "update"
