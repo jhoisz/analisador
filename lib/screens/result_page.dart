@@ -5,6 +5,24 @@ import 'package:flutter/material.dart';
 
 import '../models/token.dart';
 
+// ini: (  TIPO_DE_VAGA |
+//         CONHECIMENTOS |
+//         MODALIDADE |
+//         BENEFICIOS |
+//         SENIORIDADE |
+//         SALARIO |
+//         AREA |
+//         FRAMEWORKS_BACKEND |
+//         FRAMEWORKS_FRONTEND |
+//         FRAMEWORKS_MOBILE |
+//         SOFTSKILLS |
+//         LINGUAGENS |
+//         Space |
+//         PALAVRA |
+//         ESPECIAIS |
+//         NUMEROS
+//         )*;
+
 class ResultPage extends StatelessWidget {
   const ResultPage({super.key});
 
@@ -13,7 +31,7 @@ class ResultPage extends StatelessWidget {
     final args = ModalRoute.of(context)!.settings.arguments as List<Token>?;
 
     return Scaffold(
-      backgroundColor: const Color(0xFFD5E7F2),
+      backgroundColor: ThemeColors.background,
       body: Padding(
         padding: const EdgeInsets.all(44.0),
         child: Column(
@@ -27,7 +45,9 @@ class ResultPage extends StatelessWidget {
                           children: args
                               .map((e) => TokenCard(
                                     token: e.text,
-                                    color: Colors.blue,
+                                    color: e.type != null
+                                        ? ThemeColors.tokenTypes[e.type]!
+                                        : ThemeColors.baseColor,
                                   ))
                               .toList(),
                         )
