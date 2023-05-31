@@ -1,16 +1,37 @@
-# analisador
+<h1 align="center"> Compiladores: Analisador Sintático 🔎 </h1>
 
-A new Flutter project.
+## ℹ️ Sobre o projeto
 
-## Getting Started
+Desenvolvimento de uma aplicação web que utiliza as tecnologias ANTLR, Flutter e Django Rest para realizar a análise sintática de texto relacionado a vagas de emprego em TI. A aplicação foi projetada para identificar elementos-chave, como nível de senioridade, tipo de vaga, salário, área (backend, frontend, fullstack, mobile), subáreas (frameworks), linguagens de programação e softskills exigidas.
 
-This project is a starting point for a Flutter application.
+## :sparkles: Funcionalidades do projeto
 
-A few resources to get you started if this is your first Flutter project:
+<p align="center">
+  <img src='compiladores-analisador.gif' alt= '' />
+</p>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## :hammer: Tecnologias usadas
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Neste projeto foram usadas as seguintes tecnologias:
+
+> Framework [Flutter](https://flutter.dev/)
+
+> Linguagem [Dart](https://dart.dev/)
+
+## :arrow_forward: Como executar
+
+Primeiro você deve [instalar flutter](https://docs.flutter.dev/get-started/install).
+
+Então, você pode clocar e entrar na pasta do projeto:
+
+```bash
+git clone https://github.com/jhoisz/analisador
+cd analisador
+```
+
+Agora, para testar, você deve instalar os pacotes/dependêncas e usar um dispositivo conectado ao seu computador ou usar um emulador:
+
+```bash
+Flutter pub get
+flutter run
+```
